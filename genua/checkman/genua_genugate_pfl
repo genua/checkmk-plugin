@@ -1,0 +1,18 @@
+title: genua: Genugate PFL
+agents: snmp
+catalog: hw/network/genua
+license: GPLv2
+distribution: check_mk
+description:
+ This check monitors the PFL state, it checks the state of the config and the logfile.
+ If the state of one of each is "not OK", the service is CRIT.
+
+ Additionally it is shown if the running and local version and config differ.
+
+ The check supports the OID table under ".1.3.6.1.4.1.3717.8.8"
+
+discovery:
+ A service is created if
+ - the device is recognized as a genugate and
+ - the OID table under ".1.3.6.1.4.1.3717.8.8.*" exists
+ 

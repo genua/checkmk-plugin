@@ -1,0 +1,17 @@
+title: genua: Swap
+agents: snmp
+catalog: hw/network/genua
+license: GPLv2
+distribution: check_mk
+description:
+ This check monitors the state of swap.
+ The service is OK, if the service is "ok", CRIT if "not OK" and UNKN if "unknown".
+
+ Additionally the used and maximum swap are listed and visualized in a graph.
+
+ The check supports the OID table under ".1.3.6.1.4.1.3717.2.1.1.4"
+
+discovery:
+ A service is created if
+ - the device is recognized as a genua device and
+ - the OID table under ".1.3.6.1.4.1.3717.2.1.1.4.*" exists
